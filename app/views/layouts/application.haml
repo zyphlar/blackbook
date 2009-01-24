@@ -1,0 +1,16 @@
+!!! Transitional
+
+%html{ html_attrs }
+
+  %head
+    = meta_data
+    %meta{ 'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8' }/
+    = stylesheet_link_tag "screen.css", :media => "screen"
+    = stylesheet_link_tag "print.css",  :print => "print"
+    
+  %body{ :id => body_id }
+        
+    #content
+      = classy_flash
+      = yield
+      .clear
